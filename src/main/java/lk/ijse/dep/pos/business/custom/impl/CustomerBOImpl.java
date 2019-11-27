@@ -33,7 +33,7 @@ public class CustomerBOImpl implements CustomerBO {
 
     @Override
     public void deleteCustomer(String customerId) throws Exception {
-        if (orderDAO.existsByCustomerId(customerId)){
+        if (orderDAO.existsByCustomerId(customerId)==true){
             throw new AlreadyExistsInOrderException("Customer already exists in an order, hence unable to delete");
         }
         customerDAO.deleteById(customerId);
