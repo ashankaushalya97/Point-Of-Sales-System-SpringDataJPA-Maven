@@ -1,6 +1,6 @@
-package lk.ijse.dep.pos.dao.custom.impl;
+package lk.ijse.dep.pos.dao.impl;
 
-import lk.ijse.dep.pos.dao.custom.QueryDAO;
+import lk.ijse.dep.pos.dao.QueryDAO;
 import lk.ijse.dep.pos.entity.CustomEntity;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
