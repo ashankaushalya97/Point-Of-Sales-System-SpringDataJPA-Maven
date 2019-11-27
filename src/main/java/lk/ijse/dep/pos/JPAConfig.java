@@ -2,6 +2,7 @@ package lk.ijse.dep.pos;
 
 
 import lk.ijse.dep.crypto.DEPCrypt;
+import lk.ijse.dep.pos.dao.CustomerDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +24,7 @@ import javax.sql.DataSource;
 @Configuration
 @PropertySource("classpath:application.properties")
 @EnableTransactionManagement
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackageClasses = {CustomerDAO.class})
 public class JPAConfig {
     @Autowired
     private Environment env;
